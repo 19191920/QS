@@ -1,0 +1,80 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\WINDOWS\system32>  Get-ExecutionPolicy
+Unrestricted
+PS C:\WINDOWS\system32> Set-executionpolicy unresicted
+Set-ExecutionPolicy : Cannot bind parameter
+'ExecutionPolicy'. Cannot convert value "unresicted" to
+type "Microsoft.PowerShell.ExecutionPolicy". Error:
+"Unable to match the identifier name unresicted to a valid
+enumerator name. Specify one of the following enumerator
+names and try again:
+Unrestricted, RemoteSigned, AllSigned, Restricted,
+Default, Bypass, Undefined"
+At line:1 char:21
++ Set-executionpolicy unresicted
++                     ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Ex
+   ecutionPolicy], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessa
+   ge,Microsoft.PowerShell.Commands.SetExecutionPolicyCom
+  mand
+
+PS C:\WINDOWS\system32> Set-executionpolicy unrestrictedSet-executionpolicy unrestricted
+Set-ExecutionPolicy : Cannot bind parameter 'Scope'.
+Cannot convert value "unrestricted" to type
+"Microsoft.PowerShell.ExecutionPolicyScope". Error:
+"Unable to match the identifier name unrestricted to a
+valid enumerator name. Specify one of the following
+enumerator names and try again:
+Process, CurrentUser, LocalMachine, UserPolicy,
+MachinePolicy"
+At line:1 char:53
++ Set-executionpolicy unrestrictedSet-executionpolicy
+unrestricted
++
+~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Ex
+   ecutionPolicy], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessa
+   ge,Microsoft.PowerShell.Commands.SetExecutionPolicyCom
+  mand
+
+PS C:\WINDOWS\system32> Set-executionpolicy unrestricted
+
+Execution Policy Change
+The execution policy helps protect you from scripts that
+you do not trust. Changing the execution policy might
+expose you to the security risks described in the
+about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want
+to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All
+[S] Suspend[?] Help (default is "N"): y
+PS C:\WINDOWS\system32> Get-ExecutionPolicy
+>>
+Unrestricted
+PS C:\WINDOWS\system32> & "D:\QS\kemampuan-dasar\kemampuan-dasar-1\latihan\FirstScript.ps1"
+& : The term 'D:\QS\kemampuan-dasar\kemampuan-dasar-1\latih
+an\FirstScript.ps1' is not recognized as the name of a
+cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included,
+verify that the path is correct and try again.
+At line:1 char:3
++ & "D:\QS\kemampuan-dasar\kemampuan-dasar-1\latihan\FirstS
+cript.ps1"
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\QS\kemam
+   puan...FirstScript.ps1:String) [], CommandNotFoundExce
+  ption
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32> Write-Host "Hello, Guru99!"
+Hello, Guru99!
+PS C:\WINDOWS\system32> & "D:\QS\kemampuan-dasar\kemampuan-dasar-1\latihan\shellscript\FirstScript.ps1"
+Hello, Guru99!
+PS C:\WINDOWS\system32>

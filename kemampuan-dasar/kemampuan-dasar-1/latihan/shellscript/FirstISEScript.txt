@@ -1,0 +1,34 @@
+PS C:\Users\A S U S> D:\QS\kemampuan-dasar\kemampuan-dasar-1\latihan\shellscript\FirstISEScript.ps1
+At D:\QS\kemampuan-dasar\kemampuan-dasar-1\latihan\shellscript\FirstISEScript.p
+s1:1 char:12
++ Wrute-Host "Hello, Guru99!
++            ~~~~~~~~~~~~~~~
+The string is missing the terminator: ".
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordEx 
+   ception
+    + FullyQualifiedErrorId : TerminatorExpectedAtEndOfString
+ 
+
+PS C:\Users\A S U S> D:\QS\kemampuan-dasar\kemampuan-dasar-1\latihan\shellscript\FirstISEScript.ps1
+At D:\QS\kemampuan-dasar\kemampuan-dasar-1\latihan\shellscript\FirstISEScript.p
+s1:1 char:12
++ Write-Host "Hello, Guru99!
++            ~~~~~~~~~~~~~~~
+The string is missing the terminator: ".
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordEx 
+   ception
+    + FullyQualifiedErrorId : TerminatorExpectedAtEndOfString
+ 
+
+PS C:\Users\A S U S> D:\QS\kemampuan-dasar\kemampuan-dasar-1\latihan\shellscript\FirstISEScript.ps1
+Hello, Guru99!
+
+PS C:\Users\A S U S> D:\QS\kemampuan-dasar\kemampuan-dasar-1\latihan\shellscript\FirstISEScript.ps1
+
+CSName          FreeVirtualMemory
+------          -----------------
+LAPTOP-QDGNEN3C           3902012
+
+
+
+PS C:\Users\A S U S> 
