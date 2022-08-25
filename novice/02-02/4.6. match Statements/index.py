@@ -17,16 +17,5 @@ class point:
     x: int
     y: int
 
-def where_is(point):
-    match point:
-        case point(x=0, y=0):
-            print("origin")
-        case point(x=0, y=y):
-            print(f"Y={y}")
-        case point(x=x, y=0):
-            print(f"x={x}")
-        case point():
-            print("somewehere else")
-        case _:
-            print("not a point")
+
 
