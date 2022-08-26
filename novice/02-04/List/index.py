@@ -16,3 +16,4 @@ olditem = shoplist[0]
 del shoplist[0]
 print('i bought the', olditem)
 print('my shopping list is now', shoplist)
+
