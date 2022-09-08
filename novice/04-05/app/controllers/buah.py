@@ -1,9 +1,6 @@
-from flask import Flask, render_template, request, redirect
 import psycopg2
+from flask import Flask, render_template, request, redirect
 
-app = Flask(__name__)
-
-@app.route("/", methods=["GET", "POST"])
 def index():
 
     conn = psycopg2.connect(
@@ -35,24 +32,6 @@ def index():
     # data = ["apel","pear", "anggur"]
     return render_template("index.html", context=data)
 
-@app.route("/detail/<buah_id>")
-def detail (buah_id):
-    conn = psycopg2.connect(
-        host="localhost",
-        database="contoh",
-        user="postgres",
-        password="bukitbaling19"
-    )
-    curs = conn.cursor()
-    query = f"select * from buah where id = {buah_id}"
-    curs.execute(query)
-    data = curs.fetchone()
-    curs.close()
-    conn.close()
-    print(data)
-    return render_template("detail.html", context=data)
-
-@app.route("/delete/<buah_id>")
 def delete(buah_id):    
     conn = psycopg2.connect(
         host="localhost",
@@ -68,7 +47,6 @@ def delete(buah_id):
     conn.close()
     return redirect("/")
 
-@app.route("/update/<buah_id>", methods=["GET", "POST"])
 def update(buah_id):    
     conn = psycopg2.connect(
         host="localhost",
@@ -94,5 +72,18 @@ def update(buah_id):
     conn.close()
     return render_template("update.html", context=data)
 
-if __name__ == "__main__":
-    app.run()
+def detail (buah_id):
+    conn = psycopg2.connect(
+        host="localhost",
+        database="contoh",
+        user="postgres",
+        password="bukitbaling19"
+    )
+    curs = conn.cursor()
+    query = f"select * from buah where id = {buah_id}"
+    curs.execute(query)
+    data = curs.fetchone()
+    curs.close()
+    conn.close()
+    print(data)
+    return render_template("detail.html", context=data)

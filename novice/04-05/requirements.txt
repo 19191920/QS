@@ -1,0 +1,3 @@
+Flask
+pytho-dotenv
+psycopg2-binary

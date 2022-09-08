@@ -13,13 +13,13 @@
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #f8b3b3;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #f8b3b3;
 }
 </style>
 
@@ -27,47 +27,56 @@ tr:nth-child(even) {
 </head> 
 <body>
     <div class="container my-5">
-        <h1> tambah data</h1>
+        <h1> Create/Edit Data </h1>
         <form action="" method="post">
             <label for="exampleFormControlInput1" class="form-label">nama</label>
             <input class="form-control" name="nama" type="text" required>
-            <label for="exampleFormControlInput1" class="form-label">detail</label>
+            <br>
+            <br>
+            <label for="exampleFormControlInput1" class="form-label">alamat rumah</label>
             <input class="form-control" name="detail" type="text" required>
+            <br>
+            <br>
+            <label for="exampleFormControlInput1" class="form-label">delegasi pondok</label>
+            <input class="form-control" name="nama" type="text" required>
+            <br>
+            <br>
+            <label for="exampleFormControlInput1" class="form-label">nomor tlpn</label>
+            <input class="form-control" name="nama" type="text" required>
+            <br>
             <button type="submit">kirim</button>
     
         </form> 
-
         <hr>
-        <h1>ini respons</h1>
+        <h1>Santri Qoryatussalam</h1>
         <br>
         <table>
             <tr>
                 <th>id</th>
                 <th>nama</th>
+                <th>alamat rumah</th>
+                <th>delegasi pondok</th>
+                <th>nomor tlpn</th>
                 <th>actions</th>
             </tr>
             {% for d in context %}
             <tr>
                 <td>{{loop.index}}</td>
                 <td>{{d[1]}}</td>
+                <td>{{d[2]}}</td>
+                <td>{{d[3]}}</td>
+                <td>{{d[4]}}</td>
                 <td>
-                    <a href="/detail/{{d[0]}}">
-                        <button class="btn btn-info">detail</button>
+                    <a href="/edit/{{d[0]}}">
+                        <button class="btn btn-info">edit</button>
                     </a>
-                    <a href="/update/{{d[0]}}">
-                        <button class="btn btn-warning">update</button>
-                    </a>
-                    <a href="/delete/{{d[0]}}">
-                        <button class="btn btn-danger">delete</button>
+                    <a href="/hapus/{{d[0]}}">
+                        <button class="btn btn-warning">hapus</button>
                     </a>
                 <td>
             </tr>
             {% endfor %}
         </table>
-        
     </div>
 </body>
 <html>
-
-
-                
